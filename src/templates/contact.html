@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Content Page</h1>
+hut hut
+
+<p>
+data from backend: </br>
+{{request.user}}	</br>
+{{request.user.is_authenticated}} </br>
+
+</br>
+From context </br>
+{{num}} </br>
+{{text}}
+</p>
+
+<ul>
+{% for item in lists %}
+	{% if item == 123 %}
+		<li>{{forloop.counter}} - {{item|add:1000}}</li>
+	{% elif item == 'abd'%}
+		<li></li>
+	{% else %}
+		<li>{{forloop.counter}} - {{item}}</li>
+	{% endif %}
+{% endfor %}
+</ul>
+
+{% endblock %}

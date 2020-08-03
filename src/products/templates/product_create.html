@@ -1,0 +1,11 @@
+{% extends 'base.html'%}
+
+{% block content %}
+<h1>Form to create a product:</h1>
+<form method='POST'> 
+	{% csrf_token %}
+<!-- 	turns form into html paragraph format-->
+ 	{{form.as_p}}
+ <input type='submit' value='Save'>
+</form>
+{% endblock %}
